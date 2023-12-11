@@ -1,4 +1,4 @@
-# Player 함수
+# Player 클래스
 ```C++
 class Player {
     string playerName;
