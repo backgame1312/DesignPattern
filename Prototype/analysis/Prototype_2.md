@@ -1,4 +1,5 @@
-# 분석할 예제
+# 프로토타입 예제 코드 분석
+## 분석할 예제
 ```C++
 #include <iostream>
 #include <list>
@@ -132,3 +133,18 @@ main()
   ged.AddNewGraphics(palette.GetSelectedObj());
 }
 ```
+
+### Position 클래스
+```C++
+class Position {
+public:
+    Position() {}
+    Position(int x, int y) { x_ = x; y_ = y; }
+    int x_, y_;
+};
+```
+- 좌표를 나타내는 멤버 변수 x_, y_가 선언 됨
+- 기본 생성자는 아무런 매개변수를 받지 않고 객체를 생성함
+- > 아무런 초기화를 수행하지 않고, 기본적으로 x_, y_를 0으로 초기화됨
+- 매개변수가 있는 생성자는 x와 y좌표를 받아 객체를 초기화함
+- 이 클래스는 단순히 좌표를 표현하는데 사용되며, 좌표를 초기화하거나 가져오기 위한 간단한 인턴페이스를 제공
